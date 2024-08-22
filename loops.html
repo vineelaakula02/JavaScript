@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //For loop
+
+//1.Multiplication table
+
+const number = 5;
+
+for (let i = 1; i <= 10; i++) {
+    console.log("5 x " + i + " = " + (5 * i));
+}
+
+//2.Sum of even numbers between 1 and 50
+
+let sum = 0;
+
+for (let i = 2; i <= 50; i += 2) {
+        sum += i;
+    }
+console.log("The sum of all even numbers between 1 and 50 is: " + sum);
+
+//While loop
+
+//3.Countdown timer
+
+let num = 2;
+
+while (num <= 20) {
+    let isPrime = true;
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime) {
+        console.log(num);
+    }
+
+    num++;
+    
+}
+
+//4.Sum of odd numbers
+
+let total = 0;
+let current = 1;
+
+while (current <= 20) {
+    
+        total += current;
+        current += 2;
+}
+console.log("The sum of all odd numbers between 1 and 20 is: " + total);
+
+
+//5.Factorial calculation
+
+let n = 5;
+let factorial = 1;
+
+while (n > 0) {
+    factorial *= n;
+    n--;
+}
+console.log("The factorial of 5 is: " + factorial);
+
+
+    </script>  
+</body>
+</html>
