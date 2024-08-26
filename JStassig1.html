@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//1.Fibonacci series
+function fibonacciSeries(num) {
+    let n1 = 0, n2 = 1, sum;
+    
+    console.log('Fibonacci Series:');
+    for (let i = 1; i <= num; i++) {
+        console.log(n1);
+        sum = n1 + n2;
+        n1 = n2;
+        n2 = sum;
+    }
+}
+let num = 10;
+fibonacciSeries(num);
+
+//2.Celcius to Fahrenheit
+const celsiusToFahrenheit = (celsius) => (celsius * 9/5) + 32;
+
+let celsiusTemp = 30; 
+let fahrenheitTemp = celsiusToFahrenheit(celsiusTemp);
+
+console.log(celsiusTemp + "°C is equal to " + fahrenheitTemp + "°F");
+
+
+//3.square root of number
+
+function findSquareRoot(number) {
+    if (number < 0) {
+        return "Invalid input. Square root of a negative number is not a real number.";
+    } else {
+        return Math.sqrt(number);
+    }
+}
+
+let number = 9;
+let squareRoot = findSquareRoot(number);
+console.log(`The square root of ${number} is ${squareRoot}`);
+
+
+//4.random integer
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(getRandomInt(5, 15));
+
+//5.palindrome or not
+
+function isPalindrome(str) {
+    const Str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return Str === Str.split('').reverse().join('');
+}
+
+const inputString = "madam";
+console.log(isPalindrome(inputString));  
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
