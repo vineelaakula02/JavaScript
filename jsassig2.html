@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//1.
+
+        function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+let arrayWithDuplicates = [1, 2, 3, 2, 4, 5, 3, 6, 5];
+let uniqueArray = removeDuplicates(arrayWithDuplicates);
+
+console.log(uniqueArray); 
+
+//2.
+
+function removeFirstAndLastChar(str) {
+    if (str.length <= 2) {
+        return "String is too short!";
+    }
+    return str.slice(1, -1);
+}
+let originalString = "Hello, World!";
+let newString = removeFirstAndLastChar(originalString);
+
+console.log(newString);
+
+//3.
+
+function printArrayElements(arr) {
+    arr.forEach(function(element) {
+        console.log(element);
+    });
+}
+let stringArray = ["Apple", "Banana", "Cherry", "Date"];
+printArrayElements(stringArray);
+
+
+//4.
+
+function hasNegativeNumber(arr) {
+    return arr.some(function(number) {
+        return number < 0;
+    });
+}
+let numbersArray = [3, 7, -1, 8, 10];
+let result = hasNegativeNumber(numbersArray);
+
+console.log(result);  
+
+//5.
+
+function sumOfOddNumbers(arr) {
+    return arr
+        .filter(function(number) {
+            return number % 2 !== 0; 
+        })
+        .reduce(function(accumulator, current) {
+            return accumulator + current; 
+        }, 0); 
+}
+let numberssArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let resultt = sumOfOddNumbers(numbersArray);
+
+console.log(result);  
+
+    </script>
+</body>
+</html>
